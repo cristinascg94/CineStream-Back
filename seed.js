@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const User = require('./models/user.model');
-const Vehicle = require('./models/vehicle.model');
+const Film = require('./models/film.model');
 const Booking = require('./models/booking.model');
+const Serie = require('./models/serie.model')
 const dotenv = require('dotenv');
 
 dotenv.config();

@@ -31,7 +31,7 @@ const filmSchema = new mongoose.Schema({
     },
     valoration: {
         type: Number,
-        required: True
+        required: true
     },
     ageRestriction: {
         type: String,

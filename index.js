@@ -31,7 +31,7 @@ mongoose.connect(MONGO_URI, {
 app.use('/api/users', userRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/films', filmRoutes);
-app.use('/api/films', serieRoutes);
+app.use('/api/series', serieRoutes);
 
 // Definir el puerto y poner en marcha el servidor
 const PORT = process.env.PORT || 4040;

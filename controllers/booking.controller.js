@@ -1,5 +1,5 @@
 const Booking = require('../models/booking.model');
-const Vehicle = require('../models/film.model');
+const Film = require('../models/film.model');
 
 const bookingController = {
     // Crear una nueva reserva
