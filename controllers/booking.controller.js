@@ -5,7 +5,7 @@ const bookingController = {
     // Crear una nueva reserva
     createBooking: async (req, res) => {
         try {
-            const { vehicle, startDate, endDate, price, discount } = req.body;
+            const { vehicle, startDate, endDate, price } = req.body;
 
             // Verificar disponibilidad del vehículo
             const vehicleAvailable = await Vehicle.findById(vehicle);
@@ -18,8 +18,7 @@ const bookingController = {
                 vehicle,
                 startDate,
                 endDate,
-                price,
-                discount
+                price
             });
 
             await newBooking.save();

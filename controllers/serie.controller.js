@@ -4,8 +4,8 @@ const serieController = {
     // Agregar una pelicula 
     addSerie: async (req, res) => {
         try {
-            const { title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailler, pricePerDay } = req.body;
-            const newFilm = new Serie({
+            const { title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay } = req.body;
+            const newSerie = new Serie({
                 title,
                 director,
                 actors,                
@@ -15,7 +15,7 @@ const serieController = {
                 image,
                 valoration,
                 ageRestriction,
-                trailler,         
+                trailer,         
                 pricePerDay,
                 available: true,
             });
@@ -57,7 +57,7 @@ const serieController = {
     updateSerie: async (req, res) => {
         try {
             const { id } = req.params;
-            const {  title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailler, pricePerDay, available } = req.body;
+            const {  title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay, available } = req.body;
             const updatedSerie = await Film.findByIdAndUpdate(id, {
                 title,
                 director,
@@ -68,7 +68,7 @@ const serieController = {
                 image,
                 valoration,
                 ageRestriction,
-                trailler,         
+                trailer,         
                 pricePerDay,
                 available
             }, { new: true });

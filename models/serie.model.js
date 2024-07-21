@@ -37,7 +37,7 @@ const serieSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    trailler: {
+    trailer: {
         type: String,
         required: true
     },
