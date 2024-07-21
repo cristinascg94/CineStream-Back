@@ -29,10 +29,10 @@ const films = [
         year: 1994,
         thema: "Drama",
         synopsis: "Dos hombres encarcelados entablan una amistad a lo largo de varios años, encontrando consuelo y redención final a través de actos de decencia común.",
-        image: "http://example.com/images/shawshank.jpg",
+        image: "https://static.wikia.nocookie.net/doblaje/images/5/56/The-Shawshank-Redemption-Latino1994.jpg/revision/latest?cb=20240224231124&path-prefix=es",
         valoration: 9.3,
         ageRestriction: "16+",
-        trailer: "http://example.com/trailers/shawshank.mp4",
+        trailer: "https://www.youtube.com/watch?v=PLl99DlL6b4",
         pricePerDay: 2.99,
         available: true 
     },
