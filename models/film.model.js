@@ -48,6 +48,10 @@ const filmSchema = new mongoose.Schema({
     available: {
         type: Boolean,
         default: true
+    },
+    type: {
+        type: String,
+        default: "film"
     }
 });
 
