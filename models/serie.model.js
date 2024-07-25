@@ -51,7 +51,7 @@ const serieSchema = new mongoose.Schema({
     },
     type: {
         type: String,
-        default: "film"
+        default: "serie"
     }
 });
 
