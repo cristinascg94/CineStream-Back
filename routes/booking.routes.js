@@ -15,7 +15,7 @@ router.get('/user/:userId', protect, restrictToSelf, restrictTo('admin', 'user')
 router.delete('/:id', protect, restrictTo('admin'), bookingController.cancelBooking);
 
 // acceder a todas las reservas. Restringido a los administradores
-router.get('/', protect, restrictTo('admin'), bookingController.getBookings);
+router.get('/', protect, restrictTo('admin'), bookingController.getAllBookings);
 
 // actualizar la reserva. Restringido a los administradores
 router.patch('/:id', protect, restrictTo('admin'), bookingController.updateBooking);
