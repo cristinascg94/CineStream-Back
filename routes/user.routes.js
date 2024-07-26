@@ -15,12 +15,21 @@ router.post('/login', userController.login);
 // Asegúrate de que solo usuarios logueados puedan acceder a esta ruta
 router.patch('/update/:userId', protect, restrictToSelf, userController.updateProfile);
 
-// obtener todos los usuarios. Restringido. Solo para los administradores
-router.get('/', protect, restrictTo('admin'), userController.getUsers);
+// Ruta para obtener todos los usuarios (solo admin)
+router.get('/all', protect, restrictTo('admin'), userController.getUsers);
 
-// eliminar usuario por id. Restringido. Solo para los administradores
-router.delete('/:id', protect, restrictTo('admin'), userController.deleteUser);
+// Ruta para eliminar un usuario (solo admin)
+router.delete('/delete/:id', protect, restrictTo('admin'), userController.deleteUser);
 
 // obtener datos de un usuario. Solo para uno mismo en el area personal.
 router.get('/:id', protect, restrictToSelf, userController.getUserById)
+
+// Ruta para obtener información personal del usuario
+router.get('/my-info/:id', protect, restrictTo('user', 'admin'), userController.getInfoByUser);
+
+// // Ruta para actualizar rol del usuario (solo accesible para administradores)
+router.patch('/role/:adminId', protect, restrictTo('admin'), userController.updateUserRole);
+
+
+
 module.exports = router;

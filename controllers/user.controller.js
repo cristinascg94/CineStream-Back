@@ -64,6 +64,26 @@ const userController = {
             res.status(500).json({ message: 'Error al actualizar el perfil', error: error.message });
         }
     },
+    // Actualizar rol del usuario
+    updateUserRole: async (req, res) => {
+        try {
+            const { userId, role } = req.body;
+
+            if (!['user', 'admin'].includes(role)) {
+                return res.status(400).json({ message: 'Rol no válido' });
+            }
+
+            const updatedUser = await User.findByIdAndUpdate(userId, { role }, { new: true });
+
+            if (!updatedUser) {
+                return res.status(404).json({ message: 'Usuario no encontrado' });
+            }
+
+            res.status(200).json({ message: 'Rol actualizado con éxito', user: updatedUser });
+        } catch (error) {
+            res.status(500).json({ message: 'Error al actualizar el rol', error: error.message });
+        }
+    },
 
     // obtener todos los usuarios
     getUsers: async (rec, res) =>{
@@ -72,6 +92,19 @@ const userController = {
             res.status(200).json(users);
         } catch (error) {
             res.status(500).son({ message: 'Error al obtener los usuarios', error: error.message });
+        }
+    },
+     // Obtener la informacion personal del usuario
+     getInfoByUser: async (req, res) => {
+        try {
+            const { id } = req.params
+            const user = await User.findById(id)
+            if (!user) {
+                return res.status(404).json({ message: 'Usuario no encontrado' });
+            }
+            res.status(200).json(user);
+        } catch (error) {
+            res.status(500).json({ message: 'Error al obtener la información del usuario', error: error.message });
         }
     },
     
