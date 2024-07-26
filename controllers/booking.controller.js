@@ -59,7 +59,7 @@ const bookingController = {
     },
 
     // Obtener una reserva específica
-    getAllBookings: async (req, res) => {
+    getBooking: async (req, res) => {
         try {
             const { id } = req.params;
             const booking = await Booking.findById(id)
@@ -99,17 +99,7 @@ const bookingController = {
         try {
             // Consulta de todas las reservas
             const bookings = await Booking.find()
-                .populate('user')
-                .populate({
-                    path: 'film',
-                    select: 'title', // Solo selecciona los campos que necesitas
-                    match: { type: 'film' }
-                })
-                .populate({
-                    path: 'serie',
-                    select: 'title', // Solo selecciona los campos que necesitas
-                    match: { type: 'serie' }
-                });
+                .populate('film user serie')
     
             res.status(200).json(bookings);
         } catch (error) {
