@@ -94,11 +94,12 @@ const bookingController = {
         }
     },
 
+    // Obtener todas las reservas
     getAllBookings: async (req, res) => {
         try {
-            const bookings = await Booking.find({})
+            const bookings = await Booking.find()
                 .populate('film')
-                .populate('serie');
+                .populate('user');
             res.status(200).json(bookings);
         } catch (error) {
             res.status(500).json({ message: 'Error al obtener las reservas', error: error.message });
