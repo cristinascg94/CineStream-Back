@@ -8,6 +8,7 @@ const bookingSchema = new mongoose.Schema({
     },
     type: {
         type: String,
+        enum: ['film', 'serie'],
         required: true
     },
     film: {
@@ -30,6 +31,16 @@ const bookingSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+});
+
+bookingSchema.pre('save', function(next) {
+    if (this.type === 'film' && !this.film) {
+        next(new Error('Debe proporcionar un film para una reserva de tipo film'));
+    } else if (this.type === 'serie' && !this.serie) {
+        next(new Error('Debe proporcionar una serie para una reserva de tipo serie'));
+    } else {
+        next();
+    }
 });
 
 const Booking = mongoose.model('Booking', bookingSchema);
