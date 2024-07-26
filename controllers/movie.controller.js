@@ -1,11 +1,11 @@
-const Film = require('../models/film.model');
+const Movie = require('../models/movie.model');
 
-const filmController = {
+const movieController = {
     // Agregar una pelicula 
-    addFilm: async (req, res) => {
+    addMovie: async (req, res) => {
         try {
             const { title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay } = req.body;
-            const newFilm = new Film({
+            const newMovie = new Movie({
                 title,
                 director,
                 actors,                
@@ -20,45 +20,45 @@ const filmController = {
                 available: true,
             });
 
-            await newFilm.save();
-            res.status(201).json({ message: 'Película agregada con éxito', film: newFilm });
+            await newMovie.save();
+            res.status(201).json({ message: 'Película agregada con éxito', movie: newMovie });
         } catch (error) {
             res.status(500).json({ message: 'Error al agregar la película', error: error.message });
         }
     },
 
     // Obtener todas las peliculas
-    getAllFilms: async (req, res) => {
+    getAllMovies: async (req, res) => {
         try {
-            const films = await Film.find({});
-            res.status(200).json(films);
+            const movies = await Movie.find({});
+            res.status(200).json(movies);
         } catch (error) {
             res.status(500).json({ message: 'Error al obtener las películas', error: error.message });
         }
     },
 
     // Obtener una pelicula específico
-    getFilm: async (req, res) => {
+    getMovie: async (req, res) => {
         try {
             const { id } = req.params;
-            const film = await Film.findById(id);
+            const movie = await Movie.findById(id);
 
-            if (!film) {
+            if (!movie) {
                 return res.status(404).json({ message: 'Película no encontrada' });
             }
 
-            res.status(200).json(film);
+            res.status(200).json(movie);
         } catch (error) {
             res.status(500).json({ message: 'Error al obtener la película', error: error.message });
         }
     },
 
     // Actualizar una pelicula
-    updateFilm: async (req, res) => {
+    updateMovie: async (req, res) => {
         try {
             const { id } = req.params;
             const {  title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay, available } = req.body;
-            const updatedFilm = await Film.findByIdAndUpdate(id, {
+            const updatedMovie = await Movie.findByIdAndUpdate(id, {
                 title,
                 director,
                 actors,                
@@ -73,23 +73,23 @@ const filmController = {
                 available
             }, { new: true });
 
-            if (!updatedFilm) {
+            if (!updatedMovie) {
                 return res.status(404).json({ message: 'Película no encontrado' });
             }
 
-            res.status(200).json({ message: 'Película actualizada con éxito', film: updatedFilm });
+            res.status(200).json({ message: 'Película actualizada con éxito', movie: updatedMovie });
         } catch (error) {
             res.status(500).json({ message: 'Error al actualizar la película', error: error.message });
         }
     },
 
     // Eliminar un vehículo
-    deleteFilm: async (req, res) => {
+    deleteMovie: async (req, res) => {
         try {
             const { id } = req.params;
-            const deletedFilm = await Film.findByIdAndDelete(id);
+            const deletedMovie = await Movie.findByIdAndDelete(id);
 
-            if (!deletedFilm) {
+            if (!deletedMovie) {
                 return res.status(404).json({ message: 'Película no encontrada' });
             }
 
@@ -100,4 +100,4 @@ const filmController = {
     }
 };
 
-module.exports = filmController;
+module.exports = movieController;

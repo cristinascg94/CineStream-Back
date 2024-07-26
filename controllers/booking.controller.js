@@ -1,5 +1,5 @@
 const Booking = require('../models/booking.model');
-const Film = require('../models/film.model');
+const Movie = require('../models/movie.model');
 const Serie = require('../models/serie.model');
 
 const bookingController = {
@@ -11,9 +11,9 @@ const bookingController = {
 
             // Verificar la disponibilidad del artículo basado en su tipo
             let itemAvailable;
-            if (type === 'film') {
+            if (type === 'movie') {
                 // Buscar el artículo como una película
-                itemAvailable = await Film.findById(item);
+                itemAvailable = await Movie.findById(item);
             } else if (type === 'serie') {
                 // Buscar el artículo como una serie
                 itemAvailable = await Serie.findById(item);
@@ -25,8 +25,8 @@ const bookingController = {
             // Crear una nueva instancia de Booking
             const newBooking = new Booking({
                 user: req.user._id, // ID del usuario que realiza la reserva
-                type,              // Tipo de artículo (film o serie)
-                film: type === 'film' ? item : null,  // ID de la película si es una película
+                type,              // Tipo de artículo (movie o serie)
+                movie: type === 'movie' ? item : null,  // ID de la película si es una película
                 serie: type === 'serie' ? item : null, // ID de la serie si es una serie
                 startDate,         // Fecha de inicio de la reserva
                 endDate,           // Fecha de finalización de la reserva
@@ -49,7 +49,7 @@ const bookingController = {
         try {
             const { userId } = req.params;
             const bookings = await Booking.find({ user: userId })
-            .populate('film')
+            .populate('movie')
             .populate('serie')
 
             res.status(200).json(bookings);
@@ -63,7 +63,7 @@ const bookingController = {
         try {
             const { id } = req.params;
             const booking = await Booking.findById(id)
-                .populate('film')
+                .populate('movie')
                 .populate('serie');
 
             if (!booking) {
@@ -99,7 +99,7 @@ const bookingController = {
         try {
             // Consulta de todas las reservas
             const bookings = await Booking.find()
-                .populate('film user serie')
+                .populate('movie user serie')
     
             res.status(200).json(bookings);
         } catch (error) {

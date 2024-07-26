@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('./models/user.model');
-const Film = require('./models/film.model');
+const Movie = require('./models/movie.model');
 const Booking = require('./models/booking.model');
 const Serie = require('./models/serie.model')
 const dotenv = require('dotenv');
@@ -20,7 +20,7 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     { _id: new mongoose.Types.ObjectId(), name: "Dana Scully", email: "dana@example.com", password: "password123", role: "admin" }
 ];
 
-const films = [
+const movies = [
     { 
         _id: new mongoose.Types.ObjectId(), 
         title: "The Shawshank Redemption",
@@ -326,7 +326,7 @@ const series = [
         year: 2016,
         thema: "Comedia, Drama",
         synopsis: "Una mujer joven navega por la vida en Londres mientras trata de sobrellevar la tragedia y la lucha interna.",
-        image: "https://pics.filmaffinity.com/fleabag-510144968-large.jpg",
+        image: "https://pics.movieaffinity.com/fleabag-510144968-large.jpg",
         valoration: 8.7,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=L3iqdpYoZNU",
@@ -338,11 +338,11 @@ const series = [
 const bookings = [
     {
         user: users[0]._id,
-        type: "film",
-        film: films[0]._id,
+        type: "movie",
+        movie: movies[0]._id,
         startDate: new Date('2024-07-01'),
         endDate: new Date('2024-07-07'),
-        price: films[0].pricePerDay * 6
+        price: movies[0].pricePerDay * 6
     },
     {
         user: users[1]._id,
@@ -354,11 +354,11 @@ const bookings = [
     },
 
     { user: users[2]._id,
-        type: "film",
-        film: films[1]._id,
+        type: "movie",
+        movie: movies[1]._id,
         startDate: new Date('2024-07-05'),
         endDate: new Date('2024-07-12'),
-        price: films[1].pricePerDay * 7 
+        price: movies[1].pricePerDay * 7 
     },
 ];
 
@@ -366,7 +366,7 @@ const bookings = [
 const seedDB = async () => {
     await User.deleteMany({});
     await Serie.deleteMany({});
-    await Film.deleteMany({});
+    await Movie.deleteMany({});
     await Booking.deleteMany({});
   
     for (const user of users) {
@@ -374,9 +374,9 @@ const seedDB = async () => {
         await newUser.save();
     }
 
-    for (const film of films) {
-        const newFilm = new Film(film);
-        await newFilm.save();
+    for (const movie of movies) {
+        const newMovie = new Movie(movie);
+        await newMovie.save();
     }
 
     for (const serie of series) {

@@ -58,7 +58,7 @@ const serieController = {
         try {
             const { id } = req.params;
             const {  title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay, available } = req.body;
-            const updatedSerie = await Film.findByIdAndUpdate(id, {
+            const updatedSerie = await Movie.findByIdAndUpdate(id, {
                 title,
                 director,
                 actors,                
