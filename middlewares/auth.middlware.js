@@ -41,9 +41,12 @@ const restrictTo = (...roles) => {
 const restrictToSelf = (req, res, next) => {
     const userId = req.user._id; // ID del usuario autenticado
     const paramId = req.params.userId; // ID del usuario en la ruta
+    console.log(paramId);
+    console.log(userId.toString());
+
 
     if (userId.toString() !== paramId && req.user.role !== "admin") {
-        return res.status(403).json({ message: "No tienes permiso para acceder a este recurso." });
+        return res.status(403).json({ message: "No tienes permiso para acceder a este recurso."});
     }
 
     next();
