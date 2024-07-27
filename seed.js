@@ -29,12 +29,11 @@ const movies = [
         year: 1994,
         thema: "Drama",
         synopsis: "Dos hombres encarcelados entablan una amistad a lo largo de varios años, encontrando consuelo y redención final a través de actos de decencia común.",
-        image: "https://static.wikia.nocookie.net/doblaje/images/5/56/The-Shawshank-Redemption-Latino1994.jpg/revision/latest?cb=20240224231124&path-prefix=es",
+        image: "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
         valoration: 9.3,
         ageRestriction: "16+",
         trailer: "https://www.youtube.com/watch?v=PLl99DlL6b4",
-        pricePerDay: 2.99,
-        available: true 
+        pricePerDay: 2.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -48,8 +47,7 @@ const movies = [
         valoration: 9.2,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=UaVTIH8mujA",
-        pricePerDay: 3.49,
-        available: true 
+        pricePerDay: 3.49 
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -63,8 +61,7 @@ const movies = [
         valoration: 9.0,
         ageRestriction: "13+",
         trailer: "https://www.youtube.com/watch?v=EXeTwQWrcwY",
-        pricePerDay: 3.99,
-        available: true 
+        pricePerDay: 3.99 
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -78,8 +75,7 @@ const movies = [
         valoration: 8.9,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=tGpTpVyI_OQ",
-        pricePerDay: 2.99,
-        available: true 
+        pricePerDay: 2.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -93,8 +89,7 @@ const movies = [
         valoration: 8.8,
         ageRestriction: "13+",
         trailer: "https://www.youtube.com/watch?v=bLvqoHBptjg",
-        pricePerDay: 2.99,
-        available: true 
+        pricePerDay: 2.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -108,8 +103,7 @@ const movies = [
         valoration: 8.8,
         ageRestriction: "13+",
         trailer: "https://www.youtube.com/watch?v=YoHD9XEInc0",
-        pricePerDay: 3.49,
-        available: true 
+        pricePerDay: 3.49
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -123,8 +117,7 @@ const movies = [
         valoration: 8.8,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=BdJKm16Co6M",
-        pricePerDay: 2.99,
-        available: true 
+        pricePerDay: 2.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -138,8 +131,7 @@ const movies = [
         valoration: 8.7,
         ageRestriction: "16+",
         trailer: "https://www.youtube.com/watch?v=OM0tSTEQCQA",
-        pricePerDay: 3.49,
-        available: true 
+        pricePerDay: 3.49 
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -153,8 +145,7 @@ const movies = [
         valoration: 8.6,
         ageRestriction: "13+",
         trailer: "https://www.youtube.com/watch?v=zSWdZVtXT7E",
-        pricePerDay: 3.99,
-        available: true 
+        pricePerDay: 3.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -168,8 +159,35 @@ const movies = [
         valoration: 8.6,
         ageRestriction: "16+",
         trailer: "https://www.youtube.com/watch?v=9kLlmWPilSE",
-        pricePerDay: 3.49,
-        available: true 
+        pricePerDay: 3.49
+    },
+    {
+        _id: new mongoose.Types.ObjectId(), 
+        title: "The Lord of the Rings: The Fellowship of the Ring",
+        director: "Peter Jackson",
+        actors: "Elijah Wood, Ian McKellen, Orlando Bloom",
+        year: 2001,
+        thema: "Aventura, Drama, Fantasía",
+        synopsis: "Un hobbit de la Comarca y ocho compañeros emprenden un viaje para destruir el poderoso Anillo Único y salvar la Tierra Media del Señor Oscuro Sauron.",
+        image: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28828_p_v8_ao.jpg",
+        valoration: 8.8,
+        ageRestriction: "13+",
+        trailer: "https://www.youtube.com/watch?v=V75dMMIW2B4",
+        pricePerDay: 3.99
+    },
+    {
+        _id: new mongoose.Types.ObjectId(), 
+        title: "Schindler's List",
+        director: "Steven Spielberg",
+        actors: "Liam Neeson, Ralph Fiennes, Ben Kingsley",
+        year: 1993,
+        thema: "Biografía, Drama, Historia",
+        synopsis: "En la Polonia ocupada por los nazis durante la Segunda Guerra Mundial, Oskar Schindler gradualmente se preocupa por su fuerza de trabajo judía después de presenciar su persecución por los nazis.",
+        image: "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+        valoration: 9.0,
+        ageRestriction: "16+",
+        trailer: "https://www.youtube.com/watch?v=mxphAlJID9U",
+        pricePerDay: 3.49
     }
 ];
 
@@ -185,8 +203,8 @@ const series = [
         valoration: 9.5,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=HhesaQXLuRY",
-        pricePerDay: 2.99,
-        available: true },
+        pricePerDay: 2.99
+    },
     { _id: new mongoose.Types.ObjectId(), 
         title: "Stranger Things",
         director: "Los Hermanos Duffer",
@@ -198,8 +216,8 @@ const series = [
         valoration: 8.8,
         ageRestriction: "16+",
         trailer: "https://www.youtube.com/watch?v=Wre1F5YyIlA",
-        pricePerDay: 2.49,
-        available: true },
+        pricePerDay: 2.49
+    },
     { _id: new mongoose.Types.ObjectId(), 
         title: "Game of Thrones",
         director: "David Benioff, D.B. Weiss",
@@ -211,8 +229,8 @@ const series = [
         valoration: 9.3,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=KPLWWIOCOOQ",
-        pricePerDay: 3.99,
-        available: true },
+        pricePerDay: 3.99
+    },
     { 
         _id: new mongoose.Types.ObjectId(), 
         title: "The Witcher",
@@ -225,8 +243,7 @@ const series = [
         valoration: 8.2,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=ETY44yszyNc",
-        pricePerDay: 3.49,
-        available: true 
+        pricePerDay: 3.49
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -236,12 +253,11 @@ const series = [
         year: 2019,
         thema: "Acción, Aventura, Fantasía",
         synopsis: "Un cazarrecompensas mandaloriano viaja a los confines de la galaxia, lejos de la autoridad de la Nueva República.",
-        image: "https://static.wikia.nocookie.net/esstarwars/images/2/29/MandoS2PosterES.jpg/revision/latest?cb=20201001205530",
+        image: "https://m.media-amazon.com/images/M/MV5BN2M5YWFjN2YtYzU2YS00NzBlLTgwZWUtYWQzNWFhNDkyYjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
         valoration: 8.7,
         ageRestriction: "13+",
         trailer: "https://www.youtube.com/watch?v=aOC8E8z_ifw",
-        pricePerDay: 3.99,
-        available: true 
+        pricePerDay: 3.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -255,8 +271,7 @@ const series = [
         valoration: 9.4,
         ageRestriction: "16+",
         trailer: "https://www.youtube.com/watch?v=s9APLXM9Ei8",
-        pricePerDay: 2.99,
-        available: true 
+        pricePerDay: 2.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -270,8 +285,7 @@ const series = [
         valoration: 8.8,
         ageRestriction: "16+",
         trailer: "https://www.youtube.com/watch?v=rrwycJ08PSA",
-        pricePerDay: 2.99,
-        available: true 
+        pricePerDay: 2.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -285,8 +299,7 @@ const series = [
         valoration: 8.6,
         ageRestriction: "13+",
         trailer: "https://www.youtube.com/watch?v=JWtnJjn6ng0",
-        pricePerDay: 2.99,
-        available: true 
+        pricePerDay: 2.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -296,12 +309,11 @@ const series = [
         year: 2016,
         thema: "Drama, Misterio, Ciencia Ficción",
         synopsis: "En un parque temático futurista, los visitantes interactúan con androides en escenarios del Viejo Oeste, pero las cosas empiezan a ir mal.",
-        image: "hhttps://es.web.img2.acsta.net/pictures/16/09/01/14/52/298580.jpg",
+        image: "https://es.web.img2.acsta.net/pictures/16/09/01/14/52/298580.jpg",
         valoration: 8.6,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=kEkZdgWu7mM",
-        pricePerDay: 3.99,
-        available: true 
+        pricePerDay: 3.99
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -315,8 +327,7 @@ const series = [
         valoration: 8.8,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=zLZHdK6l55I",
-        pricePerDay: 3.49,
-        available: true 
+        pricePerDay: 3.49
     },
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -326,12 +337,25 @@ const series = [
         year: 2016,
         thema: "Comedia, Drama",
         synopsis: "Una mujer joven navega por la vida en Londres mientras trata de sobrellevar la tragedia y la lucha interna.",
-        image: "https://pics.movieaffinity.com/fleabag-510144968-large.jpg",
+        image: "https://cdn.kinocheck.com/i/cbdgmrl1f0.jpg",
         valoration: 8.7,
         ageRestriction: "18+",
         trailer: "https://www.youtube.com/watch?v=L3iqdpYoZNU",
-        pricePerDay: 2.49,
-        available: true 
+        pricePerDay: 2.49
+    },
+    {
+        _id: new mongoose.Types.ObjectId(), 
+        title: "The Boys",
+        director: "Eric Kripke",
+        actors: "Karl Urban, Jack Quaid, Antony Starr",
+        year: 2019,
+        thema: "Acción, Comedia, Crimen",
+        synopsis: "Un grupo de vigilantes se propone acabar con superhéroes corruptos que abusan de sus superpoderes.",
+        image: "https://es.web.img3.acsta.net/pictures/19/07/09/14/34/1532536.jpg?coixp=57&coiyp=52",
+        valoration: 8.7,
+        ageRestriction: "18+",
+        trailer: "https://www.youtube.com/watch?v=5SKP1_F7ReE",
+        pricePerDay: 3.49
     }
 ];
 
