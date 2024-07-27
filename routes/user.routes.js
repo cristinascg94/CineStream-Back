@@ -19,7 +19,7 @@ router.patch('/update/:userId', protect, restrictToSelf, userController.updatePr
 router.get('/all', protect, restrictTo('admin'), userController.getUsers);
 
 // Ruta para eliminar un usuario (solo admin)
-router.delete('/delete/:id', protect, restrictTo('admin'), userController.deleteUser);
+router.delete('/delete/:id', protect,restrictToSelf, restrictTo, ('user', 'admin'), userController.deleteUser);
 
 // obtener datos de un usuario. Solo para uno mismo en el area personal.
 router.get('/:id', protect, restrictToSelf, userController.getUserById)

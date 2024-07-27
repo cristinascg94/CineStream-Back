@@ -18,6 +18,6 @@ router.delete('/:id', protect, restrictTo('admin'), bookingController.cancelBook
 router.get('/', protect, restrictTo('admin'), bookingController.getAllBookings);
 
 // actualizar la reserva. Restringido a los administradores
-router.patch('/:userId/:id', protect, restrictTo('admin'), bookingController.updateBooking);
+router.patch('/:id', protect, restrictTo('admin'), bookingController.updateBooking);
 
 module.exports = router;
