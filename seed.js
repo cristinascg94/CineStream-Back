@@ -372,7 +372,7 @@ const bookings = [
     {
         user: users[1]._id,
         type: "serie",
-        serie: series[0].id,
+        serie: series[0]._id,
         startDate: new Date('2025-07-03'),
         endDate: new Date('2025-07-10'),
         price: series[0].pricePerDay * 7
@@ -387,7 +387,7 @@ const bookings = [
     {
         user: users[3]._id,
         type: "serie",
-        serie: series[5].id,
+        serie: series[5]._id,
         startDate: new Date('2025-01-08'),
         endDate: new Date('2025-01-10'),
         price: series[0].pricePerDay * 2
@@ -395,7 +395,7 @@ const bookings = [
     {
         user: users[4]._id,
         type: "serie",
-        serie: series[10].id,
+        serie: series[10]._id,
         startDate: new Date('2025-02-08'),
         endDate: new Date('2025-02-10'),
         price: series[0].pricePerDay * 2
@@ -403,7 +403,7 @@ const bookings = [
     {
         user: users[4]._id,
         type: "movie",
-        serie: movies[10].id,
+        movie: movies[10]._id,
         startDate: new Date('2025-02-08'),
         endDate: new Date('2025-02-10'),
         price: series[0].pricePerDay * 2
@@ -411,7 +411,7 @@ const bookings = [
     {
         user: users[0]._id,
         type: "movie",
-        serie: movies[11].id,
+        movie: movies[11]._id,
         startDate: new Date('2025-02-08'),
         endDate: new Date('2025-02-10'),
         price: series[0].pricePerDay * 2
@@ -419,7 +419,7 @@ const bookings = [
     {
         user: users[1]._id,
         type: "movie",
-        serie: movies[9].id,
+        movie: movies[9]._id,
         startDate: new Date('2025-02-08'),
         endDate: new Date('2025-02-10'),
         price: series[0].pricePerDay * 2
@@ -427,7 +427,7 @@ const bookings = [
     {
         user: users[2]._id,
         type: "serie",
-        serie: series[7].id,
+        serie: series[7]._id,
         startDate: new Date('2025-02-08'),
         endDate: new Date('2025-02-10'),
         price: series[0].pricePerDay * 2
