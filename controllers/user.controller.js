@@ -114,7 +114,7 @@ const userController = {
             const { id } =req.params;
             const deleteUser = await User.findByIdAndDelete(id);
             if (!deleteUser) {
-                return res.status (404).json({message: 'Usuarip no encontradp'});
+                return res.status (404).json({message: 'Usuario no encontrado'});
             }
             res.status(200).json({message:'Usuario eliminado exitosamente'});
         } catch (error) {
