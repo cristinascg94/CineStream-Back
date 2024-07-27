@@ -86,7 +86,7 @@ const userController = {
     },
 
     // obtener todos los usuarios
-    getUsers: async (rec, res) =>{
+    getUsers: async (req, res) =>{
         try {
             const users = await User.find({});
             res.status(200).json(users);
@@ -109,7 +109,7 @@ const userController = {
     },
     
     // eliminar un usuario por ID
-    deleteUser: async(rec, res) =>{
+    deleteUser: async(req, res) =>{
         try {
             const { id } =req.params;
             const deleteUser = await User.findByIdAndDelete(id);
@@ -122,7 +122,7 @@ const userController = {
         }
     },
     // obtener los datos de un usuario. para la parte de area personar
-    getUserById: async (rec, res) =>{
+    getUserById: async (req, res) =>{
         try {
             const { id } = req.params;
             const user = await User.findById(id);

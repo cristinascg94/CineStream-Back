@@ -15,9 +15,10 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
   const users = [
     { _id: new mongoose.Types.ObjectId(), name: "Alice Johnson", email: "alice@example.com", password: "password123", role: "user" },
-    { _id: new mongoose.Types.ObjectId(), name: "Admin", email: "admin@example.com", password: "password123", role: "admin" },
+    { _id: new mongoose.Types.ObjectId(), name: "Admin", email: "admin@gmail.com", password: "1", role: "admin" },
     { _id: new mongoose.Types.ObjectId(), name: "Charlie Brown", email: "charlie@example.com", password: "password123", role: "user" },
-    { _id: new mongoose.Types.ObjectId(), name: "Dana Scully", email: "dana@example.com", password: "password123", role: "admin" }
+    { _id: new mongoose.Types.ObjectId(), name: "Dana Scully", email: "dana@example.com", password: "password123", role: "admin" },
+    { _id: new mongoose.Types.ObjectId(), name: "PepinosPower", email: "user@gmail.com", password: "1", role: "user" }
 ];
 
 const movies = [
@@ -372,18 +373,65 @@ const bookings = [
         user: users[1]._id,
         type: "serie",
         serie: series[0].id,
-        startDate: new Date('2024-07-03'),
-        endDate: new Date('2024-07-10'),
+        startDate: new Date('2025-07-03'),
+        endDate: new Date('2025-07-10'),
         price: series[0].pricePerDay * 7
     },
-
     { user: users[2]._id,
         type: "movie",
         movie: movies[1]._id,
-        startDate: new Date('2024-07-05'),
-        endDate: new Date('2024-07-12'),
+        startDate: new Date('2025-07-05'),
+        endDate: new Date('2025-07-12'),
         price: movies[1].pricePerDay * 7 
     },
+    {
+        user: users[3]._id,
+        type: "serie",
+        serie: series[5].id,
+        startDate: new Date('2025-01-08'),
+        endDate: new Date('2025-01-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[4]._id,
+        type: "serie",
+        serie: series[10].id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[4]._id,
+        type: "movie",
+        serie: movies[10].id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[0]._id,
+        type: "movie",
+        serie: movies[11].id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[1]._id,
+        type: "movie",
+        serie: movies[9].id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[2]._id,
+        type: "serie",
+        serie: series[7].id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    }
 ];
 
 
