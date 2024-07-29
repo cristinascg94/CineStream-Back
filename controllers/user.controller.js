@@ -137,6 +137,32 @@ const userController = {
         } catch (error) {
             res.status(500).json({ message: 'Error al obtener el usuario', error: error.message });
         }
+    },
+    updatePassword: async (req, res) => {
+        try {
+            const { userId } = req.params;
+            const { password } = req.body;
+    
+            // Verificar si la nueva contraseña ha sido proporcionada
+            if (!password) {
+                return res.status(400).json({ message: 'La nueva contraseña es requerida' });
+            }
+    
+            // Encriptar la nueva contraseña
+            const salt = await bcrypt.genSalt(12);
+            const hashedPassword = await bcrypt.hash(password, salt);
+    
+            // Actualizar la contraseña del usuario en la base de datos
+            const updatedUser = await User.findByIdAndUpdate(userId, { password: hashedPassword }, { new: true });
+    
+            if (!updatedUser) {
+                return res.status(404).json({ message: 'Usuario no encontrado' });
+            }
+    
+            res.status(200).json({ message: 'Contraseña actualizada con éxito' });
+        } catch (error) {
+            res.status(500).json({ message: 'Error al actualizar la contraseña', error: error.message });
+        }
     }
 };
 
