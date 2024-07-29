@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
+const Booking = require('../models/booking.model')
 const bcrypt = require('bcrypt');
 // Configurar JWT
 const JWT_SECRET = 'tu_super_secreto'; // Este debe estar en una variable de entorno
@@ -115,10 +116,14 @@ const userController = {
             console.log(userId);
             const deleteUser = await User.findByIdAndDelete(userId);
             console.log(deleteUser);
+
             if (!deleteUser) {
                 return res.status (404).json({message: 'Usuario no encontrado'});
             }
-            res.status(200).json({message:'Usuario eliminado exitosamente'});
+            // Eliminar las reservas asociadas al usuario
+            await Booking.deleteMany({ user: userId });
+
+            res.status(200).json({message:'Usuario y sus reservas eliminados exitosamente'});
         } catch (error) {
             res.status(500).json({ message: 'Error al eliminar el usuario', error: error.message });
         }
