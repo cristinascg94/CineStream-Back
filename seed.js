@@ -21,6 +21,8 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     { _id: new mongoose.Types.ObjectId(), name: "PepinosPower", email: "user@gmail.com", password: "1", role: "user" }
 ];
 
+
+
 const movies = [
     { 
         _id: new mongoose.Types.ObjectId(), 
@@ -30,10 +32,10 @@ const movies = [
         year: 1994,
         thema: "Drama",
         synopsis: "Dos hombres encarcelados entablan una amistad a lo largo de varios años, encontrando consuelo y redención final a través de actos de decencia común.",
-        image: "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@.V1.jpg",
         valoration: 9.3,
         ageRestriction: "16+",
-        trailer: "https://www.youtube.com/watch?v=PLl99DlL6b4",
+        trailer: "https://www.youtube.com/embed/_znb1cUiQP8?si=4qZETzIP0T6J8Sfz",
         pricePerDay: 2.99
     },
     { 
@@ -44,10 +46,10 @@ const movies = [
         year: 1972,
         thema: "Crimen, Drama",
         synopsis: "El envejecido patriarca de una dinastía criminal organiza la transferencia de su imperio clandestino a su hijo reacio.",
-        image: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@.V1.jpg",
         valoration: 9.2,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=UaVTIH8mujA",
+        trailer: "https://www.youtube.com/embed/UaVTIH8mujA?si=9V9OvTb5feThmfHR",
         pricePerDay: 3.49 
     },
     { 
@@ -58,10 +60,10 @@ const movies = [
         year: 2008,
         thema: "Acción, Crimen, Drama",
         synopsis: "Cuando la amenaza conocida como el Joker emerge de su pasado misterioso, causa estragos y caos en la gente de Gotham.",
-        image: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@.V1.jpg",
         valoration: 9.0,
         ageRestriction: "13+",
-        trailer: "https://www.youtube.com/watch?v=EXeTwQWrcwY",
+        trailer: "https://www.youtube.com/embed/EXeTwQWrcwY?si=vcEM9iB3jekOYrCt",
         pricePerDay: 3.99 
     },
     { 
@@ -75,7 +77,7 @@ const movies = [
         image: "https://es.web.img2.acsta.net/pictures/17/06/12/10/21/182251.jpg",
         valoration: 8.9,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=tGpTpVyI_OQ",
+        trailer: "https://www.youtube.com/embed/tGpTpVyI_OQ?si=eRL6x-Dy4bjb2NgH",
         pricePerDay: 2.99
     },
     { 
@@ -86,10 +88,10 @@ const movies = [
         year: 1994,
         thema: "Drama, Romance",
         synopsis: "La presidencia de Kennedy y Johnson, los eventos de Vietnam, Watergate y otros eventos históricos se desarrollan desde la perspectiva de un hombre de Alabama con un CI bajo.",
-        image: "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@.V1_FMjpg_UX1000.jpg",
         valoration: 8.8,
         ageRestriction: "13+",
-        trailer: "https://www.youtube.com/watch?v=bLvqoHBptjg",
+        trailer: "https://www.youtube.com/embed/bLvqoHBptjg?si=4rjqMbRWKWGVEWE-",
         pricePerDay: 2.99
     },
     { 
@@ -103,7 +105,7 @@ const movies = [
         image: "https://m.media-amazon.com/images/S/pv-target-images/2b8bc4866e28f9b95c65965a2b33c8b14a8cebe8287b7399b536c672729ef018.jpg",
         valoration: 8.8,
         ageRestriction: "13+",
-        trailer: "https://www.youtube.com/watch?v=YoHD9XEInc0",
+        trailer: "https://www.youtube.com/embed/YoHD9XEInc0?si=KPNaE_Sbcw698fXs",
         pricePerDay: 3.49
     },
     { 
@@ -114,10 +116,10 @@ const movies = [
         year: 1999,
         thema: "Drama",
         synopsis: "Un oficinista insomne y un fabricante de jabón imprudente forman un club de pelea subterráneo que se convierte en algo mucho, mucho más.",
-        image: "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@.V1_FMjpg_UX1000.jpg",
         valoration: 8.8,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=BdJKm16Co6M",
+        trailer: "https://www.youtube.com/embed/BdJKm16Co6M?si=BhPzsaabpokmmqSu",
         pricePerDay: 2.99
     },
     { 
@@ -128,10 +130,10 @@ const movies = [
         year: 1999,
         thema: "Acción, Ciencia Ficción",
         synopsis: "Un hacker descubre la verdad inquietante sobre su realidad y su papel en la guerra contra sus controladores.",
-        image: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@.V1_FMjpg_UX1000.jpg",
         valoration: 8.7,
         ageRestriction: "16+",
-        trailer: "https://www.youtube.com/watch?v=OM0tSTEQCQA",
+        trailer: "https://www.youtube.com/embed/OM0tSTEQCQA?si=89UNmgwgjyfun67_",
         pricePerDay: 3.49 
     },
     { 
@@ -145,7 +147,7 @@ const movies = [
         image: "https://es.web.img3.acsta.net/pictures/14/10/02/11/07/341344.jpg",
         valoration: 8.6,
         ageRestriction: "13+",
-        trailer: "https://www.youtube.com/watch?v=zSWdZVtXT7E",
+        trailer: "https://www.youtube.com/embed/zSWdZVtXT7E?si=WSOmffPhwcX_unes",
         pricePerDay: 3.99
     },
     { 
@@ -159,7 +161,7 @@ const movies = [
         image: "https://m.media-amazon.com/images/S/pv-target-images/bbed89d7822a68e883cb964d109c5b81e9dcc60fb0248c7b724467bebba45624.jpg",
         valoration: 8.6,
         ageRestriction: "16+",
-        trailer: "https://www.youtube.com/watch?v=9kLlmWPilSE",
+        trailer: "https://www.youtube.com/embed/9kLlmWPilSE?si=wSdUXZ46cD_q-0Ar",
         pricePerDay: 3.49
     },
     {
@@ -173,7 +175,7 @@ const movies = [
         image: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28828_p_v8_ao.jpg",
         valoration: 8.8,
         ageRestriction: "13+",
-        trailer: "https://www.youtube.com/watch?v=V75dMMIW2B4",
+        trailer: "https://www.youtube.com/embed/V75dMMIW2B4?si=g7lHN0OXThRzRBaW",
         pricePerDay: 3.99
     },
     {
@@ -184,13 +186,20 @@ const movies = [
         year: 1993,
         thema: "Biografía, Drama, Historia",
         synopsis: "En la Polonia ocupada por los nazis durante la Segunda Guerra Mundial, Oskar Schindler gradualmente se preocupa por su fuerza de trabajo judía después de presenciar su persecución por los nazis.",
-        image: "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@.V1_FMjpg_UX1000.jpg",
         valoration: 9.0,
         ageRestriction: "16+",
-        trailer: "https://www.youtube.com/watch?v=mxphAlJID9U",
+        trailer: "https://www.youtube.com/embed/mxphAlJID9U?si=Evnh929o-1U78L9Y",
         pricePerDay: 3.49
     }
 ];
+
+
+
+
+
+
+
 
 const series = [
     { _id: new mongoose.Types.ObjectId(), 
@@ -203,7 +212,7 @@ const series = [
         image: "https://es.web.img3.acsta.net/pictures/18/04/04/22/52/3191575.jpg",
         valoration: 9.5,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=HhesaQXLuRY",
+        trailer: "https://www.youtube.com/embed/HhesaQXLuRY?si=qHYllWIIvAYQTgy3",
         pricePerDay: 2.99
     },
     { _id: new mongoose.Types.ObjectId(), 
@@ -216,7 +225,7 @@ const series = [
         image: "https://es.web.img3.acsta.net/pictures/22/05/14/13/26/5638861.jpg",
         valoration: 8.8,
         ageRestriction: "16+",
-        trailer: "https://www.youtube.com/watch?v=Wre1F5YyIlA",
+        trailer:"https://www.youtube.com/embed/x7Yq9MJUqjY?si=LI4y-HpKos5HEf7K",
         pricePerDay: 2.49
     },
     { _id: new mongoose.Types.ObjectId(), 
@@ -229,7 +238,7 @@ const series = [
         image: "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
         valoration: 9.3,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=KPLWWIOCOOQ",
+        trailer: "https://www.youtube.com/embed/KPLWWIOCOOQ?si=2nwH8eXSfU93o0DO" ,
         pricePerDay: 3.99
     },
     { 
@@ -243,7 +252,7 @@ const series = [
         image: "https://es.web.img2.acsta.net/pictures/19/11/22/09/33/5060052.jpg",
         valoration: 8.2,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=ETY44yszyNc",
+        trailer: "https://www.youtube.com/embed/ETY44yszyNc?si=jH4zqCDWa8RSEgL6",
         pricePerDay: 3.49
     },
     { 
@@ -257,7 +266,7 @@ const series = [
         image: "https://m.media-amazon.com/images/M/MV5BN2M5YWFjN2YtYzU2YS00NzBlLTgwZWUtYWQzNWFhNDkyYjg3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
         valoration: 8.7,
         ageRestriction: "13+",
-        trailer: "https://www.youtube.com/watch?v=aOC8E8z_ifw",
+        trailer: "https://www.youtube.com/embed/aOC8E8z_ifw?si=i1ExNp_jPYN8Larg",
         pricePerDay: 3.99
     },
     { 
@@ -271,7 +280,7 @@ const series = [
         image: "https://es.web.img3.acsta.net/pictures/19/04/29/08/21/1692162.jpg?coixp=45&coiyp=73",
         valoration: 9.4,
         ageRestriction: "16+",
-        trailer: "https://www.youtube.com/watch?v=s9APLXM9Ei8",
+        trailer: "https://www.youtube.com/embed/s9APLXM9Ei8?si=Pufbx2LBZlfnHrIs",
         pricePerDay: 2.99
     },
     { 
@@ -285,7 +294,7 @@ const series = [
         image: "https://es.web.img3.acsta.net/pictures/17/11/10/12/27/3064798.jpg",
         valoration: 8.8,
         ageRestriction: "16+",
-        trailer: "https://www.youtube.com/watch?v=rrwycJ08PSA",
+        trailer:"https://www.youtube.com/embed/rrwycJ08PSA?si=otDBDffHipA6swhh" ,
         pricePerDay: 2.99
     },
     { 
@@ -299,7 +308,7 @@ const series = [
         image: "https://es.web.img3.acsta.net/pictures/22/10/18/00/44/2538124.jpg",
         valoration: 8.6,
         ageRestriction: "13+",
-        trailer: "https://www.youtube.com/watch?v=JWtnJjn6ng0",
+        trailer: "https://www.youtube.com/embed/JWtnJjn6ng0?si=mfTkFBNjYuhugP9K" ,
         pricePerDay: 2.99
     },
     { 
@@ -327,7 +336,7 @@ const series = [
         image: "https://es.web.img3.acsta.net/pictures/23/05/24/11/22/4785740.jpg",
         valoration: 8.8,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=zLZHdK6l55I",
+        trailer: "https://www.youtube.com/embed/kEkZdgWu7mM?si=0H-6nKp5MBkaqdrm",
         pricePerDay: 3.49
     },
     { 
@@ -341,7 +350,7 @@ const series = [
         image: "https://cdn.kinocheck.com/i/cbdgmrl1f0.jpg",
         valoration: 8.7,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=L3iqdpYoZNU",
+        trailer: "https://www.youtube.com/embed/L3iqdpYoZNU?si=w0Vga_bWGhR7O-pw",
         pricePerDay: 2.49
     },
     {
@@ -355,7 +364,7 @@ const series = [
         image: "https://es.web.img3.acsta.net/pictures/19/07/09/14/34/1532536.jpg?coixp=57&coiyp=52",
         valoration: 8.7,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=5SKP1_F7ReE",
+        trailer: "https://www.youtube.com/embed/5SKP1_F7ReE?si=6h7WYe2SRR-_H4Xk",
         pricePerDay: 3.49
     }
 ];
