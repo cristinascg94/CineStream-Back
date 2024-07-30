@@ -4,7 +4,7 @@ const movieController = {
     // Agregar una pelicula 
     addMovie: async (req, res) => {
         try {
-            const { title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay } = req.body;
+            const { title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay, type } = req.body;
             const newMovie = new Movie({
                 title,
                 director,
@@ -17,7 +17,7 @@ const movieController = {
                 ageRestriction,
                 trailer,         
                 pricePerDay,
-                available: true,
+                type
             });
 
             await newMovie.save();
@@ -57,7 +57,7 @@ const movieController = {
     updateMovie: async (req, res) => {
         try {
             const { id } = req.params;
-            const {  title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay, available } = req.body;
+            const {  title, director, actors, year, thema, synopsis, image, valoration, ageRestriction, trailer, pricePerDay } = req.body;
             const updatedMovie = await Movie.findByIdAndUpdate(id, {
                 title,
                 director,
@@ -70,7 +70,6 @@ const movieController = {
                 ageRestriction,
                 trailer,         
                 pricePerDay,
-                available
             }, { new: true });
 
             if (!updatedMovie) {

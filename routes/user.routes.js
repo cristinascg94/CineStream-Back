@@ -27,9 +27,10 @@ router.get('/:id', protect, restrictToSelf, userController.getUserById)
 // Ruta para obtener información personal del usuario
 router.get('/my-info/:id', protect, restrictTo('user', 'admin'), userController.getInfoByUser);
 
-// // Ruta para actualizar rol del usuario (solo accesible para administradores)
+// Ruta para actualizar rol del usuario (solo accesible para administradores)
 router.patch('/role/:adminId', protect, restrictTo('admin'), userController.updateUserRole);
 
-
+// Ruta para actualizar contaseña del usuario
+router.patch('/password/:userId', protect, restrictTo('user', 'admin'), userController.updatePassword)
 
 module.exports = router;
