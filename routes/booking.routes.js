@@ -20,4 +20,5 @@ router.get('/', protect, restrictTo('admin'), bookingController.getAllBookings);
 // actualizar la reserva. Restringido a los administradores
 router.patch('/:userId/:id', protect, restrictTo('admin'), bookingController.updateBooking);
 
+
 module.exports = router;

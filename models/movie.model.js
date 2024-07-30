@@ -45,12 +45,9 @@ const movieSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    available: {
-        type: Boolean,
-        default: true
-    },
     type: {
         type: String,
+        enum: "movie",
         default: "movie"
     }
 });

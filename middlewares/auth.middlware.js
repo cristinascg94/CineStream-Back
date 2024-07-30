@@ -17,8 +17,11 @@ const protect = async (req, res, next) => {
         const decoded = jwt.verify(token, 'tu_super_secreto'); // Asegúrate de cambiar 'tu_super_secreto' con tu clave secreta de JWT.
 
         const currentUser = await User.findById(decoded.userId);
+        console.log(currentUser);
+        console.log(decoded.userId);
         if (!currentUser) {
             return res.status(401).json({ message: 'El usuario al que pertenece este token ya no existe' });
+
         }
 
         req.user = currentUser;
