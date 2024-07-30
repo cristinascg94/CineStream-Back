@@ -322,7 +322,7 @@ const series = [
         image: "https://es.web.img2.acsta.net/pictures/16/09/01/14/52/298580.jpg",
         valoration: 8.6,
         ageRestriction: "18+",
-        trailer: "https://www.youtube.com/watch?v=kEkZdgWu7mM",
+        trailer: "https://www.youtube.com/embed/7GCDMuSYcqM?si=UPAlt7iLCBX96O75",
         pricePerDay: 3.99
     },
     { 
